@@ -6,7 +6,7 @@ const index = ({ data }) => {
   const products = data.allMarkdownRemark.nodes
   return (
     <>
-      Hello world!
+      Hello world!?
       <p>here is my products i have</p>
       {products.map((product, i) => (
         <div className="products" key={i}>
