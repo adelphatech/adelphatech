@@ -1,0 +1,374 @@
+backend:
+  name: git-gateway
+  repo: adelphatech/adelphatech
+  
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+media_folder: static/img
+public_folder: /img
+publish_mode: editorial_workflow
+
+collections:
+  - name: MenuItem
+    label: Menu Item
+    folder: posts/Menu
+    extension: "json"
+    format: json
+    create: true
+    identifier_field: CTAText
+    fields:
+      - { name: CTAText, label: CTA Text, widget: string }
+      - { name: CTALink, label: CTA Link, widget: string }
+      - {
+          name: Order,
+          label: Order,
+          widget: "select",
+          options: ["1", "2", "3", "4","5"],
+        }  
+  - name: "Footer"
+    label: "Footer Section Posts"
+    files:     
+      - file: "posts/footer/footer_section1.json"
+        label: "Social Media Links"
+        name: "MediaLinks"
+        fields:
+          
+          - {
+              label: Social Media,
+              name: SocialMedia,
+              widget: list,
+              fields:
+                [
+                  { name: Title, label: Title, widget: string },
+                   { name: CTALink, label: CTA Link, widget: string },
+                  { name: Image, label: Image, widget: image },
+                  
+                ],
+            }
+          - {
+              label: Bottom Links,
+              name: BottomLinks,
+              widget: list,
+              fields:
+                [
+                  { name: CTAText, label: CTA Text, widget: string },
+                  { name: CTALink, label: CTA Link, widget: string },
+                  
+                ],
+            }
+          - { name: AndroidCTALink, label: Google Play CTA Link, widget: string }
+          - { name: IOSCTALink, label: App Store CTA Link, widget: string }
+
+      - file: "posts/footer/app_links.json"
+        label: "App Links"
+        name: "AppLinks"
+        fields:
+          - {
+              label: Bottom Links App,
+              name: BottomLinksApp,
+              widget: list,
+              fields:
+                [
+                  { name: CTAText, label: CTA Text, widget: string },
+                  { name: CTALink, label: CTA Link, widget: string },
+                  
+                ],
+            }
+
+      - file: "posts/footer/company_links.json"
+        label: "Company Links"
+        name: "CompanyLinks"
+        fields:
+          - {
+              label: Bottom Links Company,
+              name: BottomLinksCompany,
+              widget: list,
+              fields:
+                [
+                  { name: CTAText, label: CTA Text, widget: string },
+                  { name: CTALink, label: CTA Link, widget: string },
+                  
+                ],
+            }
+  - name: "HomePost"
+    label: "Home Post"
+    files:
+      - file: "posts/metadata/home_meta_data.json"
+        label: "Meta Data"
+        name: "MetaData"
+        fields:
+          - { name: HomeMetaTitle, label: Meta Title, widget: string }
+          - { name: HomeMetaDescription, label: Meta Description, widget: text }
+          - { name: Homekeywords, label: keywords, widget: string }    
+      - file: "posts/home/Hero.json"
+        label: "Hero Widget"
+        name: "HeroWidget"
+        fields:
+          - { name: Title, label: Title, widget: string }
+          - { name: SubTitle, label: Sub Title, widget: string }
+          - { name: Description, label: Description, widget: text }
+          - { name: Image, label: Image, widget: image }
+          - { name: AndroidCTALink, label: Android CTA Link, widget: string }
+          - { name: IOSCTALink, label: IOS CTA Link, widget: string }
+      - file: "posts/home/benefits.json"
+        label: "Bogo Benefits"
+        name: "BogoBenefits"
+        fields:
+          - {
+              label: Bogo Benefits,
+              name: BogoBenefits,
+              widget: list,
+              fields:
+                [
+                  { name: BenefitsImage, label: Image, widget: image },
+                  { name: BenefitsTitle, label: Title, widget: string },
+                   { name: BenefitsCTALink, label: CTA Link, widget: string },
+                  { name: BenefitsDescription, label: Description, widget: string },
+                  
+                ],
+            }
+      - file: "posts/home/services.json"
+        label: "Bogo Services"
+        name: "BogoServices"
+        fields:
+          - {
+              label: Bogo Services,
+              name: BogoServices,
+              widget: list,
+              fields:
+                [
+                  { name: ServicesTitle , label: Title, widget: string },
+                  { name: ServicesImage , label: Image, widget: image },
+                  
+                  
+                ],
+            }
+      
+  - name: "PricingPost"
+    label: "Pricing Post"
+    files:
+      - file: "posts/metadata/Pricing_meta_data.json"
+        label: "Meta Data"
+        name: "MetaData"
+        fields:
+          - { name: PricingMetaTitle, label: Meta Title, widget: string }
+          - { name: PricingMetaDescription, label: Meta Description, widget: text }
+          - { name: Pricingkeywords, label: keywords, widget: string }    
+      - file: "posts/pricing/widgettext.json"
+        label: "Title with Description Widget"
+        name: "TextWidget"
+        fields:
+          - { name: Title, label: Title, widget: string }
+          - { name: FirstDescription, label: First Description, widget: text }
+          - { name: SecondDescription, label: Second Description, widget: text }
+      - file: "posts/pricing/plan.json"
+        label: "Bogo Plan"
+        name: "BogoPlan"
+        fields:
+          - {
+              label: Bogo Plan,
+              name: BogoPlan,
+              widget: list,
+              fields:
+                [
+                  { name: PlanTitle, label: Title, widget: string },
+                  { name: PlanImage, label: Image, widget: image },
+                  { name: PlanSubTitle, label: Sub Title, widget: string },
+                  { name: PlanDescription, label: Description, widget: text },
+                  { name: PlanCTAText, label: CTA Text, widget: string },
+                  { name: PlanCTALink, label: CTA Link, widget: string },
+                  
+                  
+                ],
+            }
+ 
+
+      - file: "posts/pricing/widget_image.json"
+        label: "Text with CTA Link Widget"
+        name: "TextwithCTALinkWidget"
+        fields:
+          - { name: TitleCTALinkTitle, label: Title, widget: string }
+          - {
+              label: Bogo Options,
+              name: BogoOptions,
+              widget: list,
+              fields:
+                [
+                  { name: PlanTitle, label: Title, widget: string },
+                ],
+            }
+          - { name: TitleCTALinkImage, label: Image, widget: image }
+          - { name: TitleCTALinkText, label: CTA Text, widget: string }
+          - { name: TitleCTALinkLink, label:  CTA Link, widget: string }               
+
+      - file: "posts/pricing/merchant_pricing_widget.json"
+        label: "Pricing Merchant Widget"
+        name: "PricingMerchantWidget"
+        fields:
+          - { name: PricingMerchantTitle, label: Title, widget: string }
+          - { name: PricingMerchantDescription, label: Description, widget: text }
+          - { name: PricingMerchantImage, label: Image, widget: image }
+          - { name: PricingMerchantCTAText, label: CTA Text, widget: string }
+          - { name: PricingMerchantCTALink, label: CTA Link, widget: string }   
+
+  - name: "AboutUsPost"
+    label: "About Post"
+    files:
+      - file: "posts/metadata/About_meta_data.json"
+        label: "Meta Data"
+        name: "MetaData"
+        fields:
+          - { name: AboutMetaTitle, label: Meta Title, widget: string }
+          - { name: AboutMetaDescription, label: Meta Description, widget: text }
+          - { name: Aboutkeywords, label: keywords, widget: string }     
+      - file: "posts/about/abouttextwidget.json"
+        label: "First Text Widget"
+        name: "FirstTextWidget"
+        fields:
+          - { name: FirstTextWidgetDescription, label: Description, widget: text }
+          
+      - file: "posts/about/secondabouttextwidget.json"
+        label: "Second Text Widget"
+        name: "SecondTextWidget"
+        fields:
+          - { name: SecondTextWidgetDescription, label: Description, widget: text }
+      - file: "posts/about/aboutimagewidget.json"
+        label: "First Image Widget"
+        name: "FirstImageWidget"
+        fields:
+          - { name: MainImage, label: Image, widget: image }
+          
+      - file: "posts/about/secondaboutimagewidget.json"
+        label: "Second Image Widget"
+        name: "SecondImageWidget"
+        fields:
+          - { name: SecondImage, label: Image, widget: image }
+
+  - name: "BusinessPost"
+    label: "Business Post"
+    files:
+      - file: "posts/metadata/Business_meta_data.json"
+        label: "Meta Data"
+        name: "MetaData"
+        fields:
+          - { name: BusinessMetaTitle, label: Meta Title, widget: string }
+          - { name: BusinessMetaDescription, label: Meta Description, widget: text }
+          - { name: Businesskeywords, label: keywords, widget: string }    
+      - file: "posts/business/businesselemts.json"
+        label: "Business Items"
+        name: "BusinessItems"
+        fields:
+          - {
+              label: Business Items,
+              name: BusinessItems,
+              widget: list,
+              fields:
+                [
+                  { name: BogoAppItem, label: Bogo App Item, widget: string },
+                  { name: IncentiveAppItem, label: Incentive App Item, widget: string },
+                ],
+            }
+      - file: "posts/business/widget_image1.json"
+        label: "Business Text with CTA Link Widget"
+        name: "BusinessTextwithCTALinkWidget"
+        fields:
+          - { name: BusinessTitleCTALinkTitle, label: Title, widget: string }
+          - { name: BusinessTitleCTALinkDescription, label: Description, widget: string }
+
+          - { name: BusinessTitleCTALinkImage, label: Image, widget: image }
+          - { name: BusinessTitleCTALinkText, label: CTA Text, widget: string }
+          - { name: BusinessTitleCTALinkLink, label:  CTA Link, widget: string }  
+      - file: "posts/business/steps.json"
+        label: "Business Steps"
+        name: "BusinessSteps"
+        fields:
+          - {
+              label: Business Steps,
+              name: BusinessSteps,
+              widget: list,
+              fields:
+                [
+                  { name: BusinessStepTitle, label: Title, widget: string },
+                  { name: BusinessStepImage, label: Image, widget: image },
+                ],
+            }
+                            
+  - name: "BrandAmbassadorPost"
+    label: "Brand Ambassador Post"
+    files:
+      - file: "posts/metadata/Brand_meta_data.json"
+        label: "Meta Data"
+        name: "MetaData"
+        fields:
+          - { name: BrandMetaTitle, label: Meta Title, widget: string }
+          - { name: BrandMetaDescription, label: Meta Description, widget: text }
+          - { name: Brandkeywords, label: keywords, widget: string }     
+      - file: "posts/brand/textoptions.json"
+        label: "Text Widget with options"
+        name: "TextWidgetwithoptions"
+        fields:
+          - { name: TextWidgetwithoptionsTitle, label: Title, widget: string } 
+          - { name: TextWidgetwithoptionsDescription, label: Description, widget: text }  
+          - { name: BrandOptionsTitle, label: Option Title, widget: string }             
+          - {
+              label: Brand Options,
+              name: BrandOptions,
+              widget: list,
+              fields:
+                [
+                  { name: BrandOptionsItem, label: Option Item, widget: string },
+                  
+                ],
+            }
+                
+      - file: "posts/brand/widget_image2.json"
+        label: "Brand Text with CTA Link Widget"
+        name: "BrandTextwithCTALinkWidget"
+        fields:
+          - { name: Branditle, label: Title, widget: string }
+          - { name: BrandDescription, label: Description, widget: string }
+
+          - { name: BrandImage, label: Image, widget: image }
+          - { name: BrandText, label: CTA Text, widget: string }
+          - { name: BrandLink, label:  CTA Link, widget: string }  
+  - name: "CommonResourcePost"
+    label: "Common Resource Post"
+    files:
+      - file: "posts/resource/widgemultipletitle.json"
+        label: "Merchant Multiple Title Widget"
+        name: "MultipleTitleWidget"
+        fields:
+          - { name: MultipleTitleWidgetFirstTitle, label: First Title, widget: string }
+          - { name: MultipleTitleWidgetFirstDescription, label: First Description, widget: text }
+          - { name: MultipleTitleWidgetFirstCTAText, label: First CTA Text, widget: string }
+          - { name: MultipleTitleWidgetFirstCTALink, label: First CTA Link, widget: string }
+          - { name: MultipleTitleWidgetSecondTitle, label: Second Title, widget: string }
+          - { name: MultipleTitleWidgetSecondDescription, label: Second Description, widget: text }
+          - { name: MultipleTitleWidgetSecondCTAText, label: Second CTA Text, widget: string }
+          - { name: MultipleTitleWidgetSecondCTALink, label: Second CTA Link, widget: string }
+          - { name: MultipleTitleWidgeImage, label: Main Image, widget: image }
+      - file: "posts/home/merchant_widget.json"
+        label: "Merchant Widget"
+        name: "MerchantWidget"
+        fields:
+          - { name: MerchantTitle, label: Title, widget: string }
+          - { name: MerchantDescription, label: Description, widget: text }
+          - { name: MerchantImage, label: Image, widget: image }
+          - { name: MerchantCTAText, label: CTA Text, widget: string }
+          - { name: MerchantCTALink, label: CTA Link, widget: string }   
+      - file: "posts/resource/brochure_widget.json"
+        label: "Brochure Widget"
+        name: "BrochureWidget"
+        fields:
+          - { name: BrochureTitle, label: Title, widget: string }
+          - { name: BrochureDescription, label: Description, widget: text }
+          - { name: BrochureImage, label: First Image, widget: image }
+          - { name: SecondBrochureImage, label: Second Image, widget: image }
+          - { name: BrochureCTAText, label: CTA Text, widget: string }
+          - { name: BrochureCTALink, label: CTA Link, widget: string }                       
+
