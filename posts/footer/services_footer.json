@@ -1,0 +1,29 @@
+{
+  "ServicesTitle": "Our Services",
+  "Our Services Links": [
+    {
+      "ServicesCTAText": " Web development",
+      "ServicesCTALink": "/"
+    },
+    {
+      "ServicesCTAText": "Backend development",
+      "ServicesCTALink": "/"
+    },
+    {
+      "ServicesCTAText": "Frameworks",
+      "ServicesCTALink": "/"
+    },
+    {
+      "ServicesCTAText": "CMS Applications",
+      "ServicesCTALink": "/"
+    },
+    {
+      "ServicesCTAText": "Databases",
+      "ServicesCTALink": "/"
+    },
+    {
+      "ServicesCTAText": "Project Management",
+      "ServicesCTALink": "/"
+    }
+  ]
+}
