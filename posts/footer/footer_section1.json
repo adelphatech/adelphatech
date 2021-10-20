@@ -1,0 +1,16 @@
+{
+  "SocialMedia": [
+    {
+      "Title": "facebook",
+      "CTALink": "https://www.facebook.com/adelphatech/"
+    },
+    {
+      "CTALink": "https://twitter.com/AdelphaTech",
+      "Title": "twitter"
+    },
+    {
+      "Title": "linkedin",
+      "CTALink": "https://www.linkedin.com/company/adelpha-tech/mycompany/"
+    }
+  ]
+}
