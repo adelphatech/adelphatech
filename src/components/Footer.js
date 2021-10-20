@@ -11,7 +11,7 @@ const Footer = ({ data }) => {
         // Update the document title using the browser API
         const script = document.createElement("script");
 
-        script.src = "../img/jquery.min.js";
+        script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js";
         script.async = true;
 
         document.body.appendChild(script);
@@ -19,7 +19,7 @@ const Footer = ({ data }) => {
         ////////////////////////
         const script2 = document.createElement("script");
 
-        script2.src = "../img/bootstrap.min.js";
+        script2.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js";
         script2.async = true;
 
         document.body.appendChild(script2);
