@@ -15,7 +15,7 @@ const index = ({ children }) => {
             </div>
             <div className="container">
               <div className="slider-caption">
-                <h2><span>Bringing</span><br />
+                <h2><span>Bringing </span><br />
                   projects <span>to </span> <span>Life</span></h2>
                 <p>For over 7 years, clients have trusted us in supporting their software development needs at super competitive rates. We are experts in a variety of skillsets from web, cloud, mobile and desktop technologies. Take a look at some of our delivered projects, for companies small, medium and large.</p>
                 <a href="Portfolio.html">SEE THE PROOF</a>
