@@ -45,56 +45,37 @@ collections:
               fields:
                 [
                   { name: Title, label: Title, widget: string },
-                   { name: CTALink, label: CTA Link, widget: string },
-                  { name: Image, label: Image, widget: image },
-                  
-                ],
-            }
-          - {
-              label: Bottom Links,
-              name: BottomLinks,
-              widget: list,
-              fields:
-                [
-                  { name: CTAText, label: CTA Text, widget: string },
                   { name: CTALink, label: CTA Link, widget: string },
+                 
                   
                 ],
             }
-          - { name: AndroidCTALink, label: Google Play CTA Link, widget: string }
-          - { name: IOSCTALink, label: App Store CTA Link, widget: string }
-
-      - file: "posts/footer/app_links.json"
-        label: "App Links"
-        name: "AppLinks"
+        
+      - file: "posts/footer/about_footer.json"
+        label: "About Description Footer"
+        name: "AboutDescriptionFooter"
         fields:
-          - {
-              label: Bottom Links App,
-              name: BottomLinksApp,
-              widget: list,
-              fields:
-                [
-                  { name: CTAText, label: CTA Text, widget: string },
-                  { name: CTALink, label: CTA Link, widget: string },
-                  
-                ],
-            }
+          - { name: AboutTitle, label: Title, widget: string }
+          - { name: AboutDescription, label: Description, widget: text }
+          - { name: AboutCTAText, label: CTA Text, widget: string }
+          - { name: AboutCTALink, label: CTA Link, widget: string }
 
-      - file: "posts/footer/company_links.json"
-        label: "Company Links"
-        name: "CompanyLinks"
+      - file: "posts/footer/services_footer.json"
+        label: "Our Services Links"
+        name: "OurServices"
         fields:
+          - { name: ServicesTitle, label: Services Title, widget: string }
           - {
-              label: Bottom Links Company,
-              name: BottomLinksCompany,
+              label: Our Services Links,
+              name: Our Services Links,
               widget: list,
               fields:
                 [
-                  { name: CTAText, label: CTA Text, widget: string },
-                  { name: CTALink, label: CTA Link, widget: string },
+                  { name: ServicesCTAText, label: CTA Text, widget: string },
+                  { name: ServicesCTALink, label: CTA Link, widget: string },
                   
                 ],
-            }
+            }          
   - name: "HomePost"
     label: "Home Post"
     files:

@@ -9,9 +9,9 @@ const index = ({ children }) => {
       <Layout> <div className="main-slider">
         <ul className="main-slider-item">
           <li>
-            <img src="getattachment/f3554df2-93d8-43d1-965e-b49643f2021e/abstract-shape2.png" />
+            <img src="../img/abstract-shape2.png" />
             <div className="bottom-slider">
-              <img src="App_Themes/Adelphatech/images/bottom-main-slider.png" alt="" className />
+              <img src="../img/bottom-main-slider.png" alt="" className />
             </div>
             <div className="container">
               <div className="slider-caption">
