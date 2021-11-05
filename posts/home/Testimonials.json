@@ -1,0 +1,42 @@
+{
+  "TestimonialsTitle": "TESTIMONIALS",
+  "TestimonialsSubTitle": "Lets see what say clients about us",
+  "LatestTestimonials": [
+    {
+      "TestimonialDescription": " Consultancies are often an unknown, and you never know what your actual experience will be. Adelphatech has exceeded our expectations by performing work at a high level of competence, within budget, ahead of schedule.\n",
+      "TestimonialName": "Malcolm S.",
+      "TestimonialFunction": "CIO, ISS",
+      "TestimonialImage": "/img/iss-1-.jpg"
+    },
+    {
+      "TestimonialDescription": "AdelphaTech has been a tremendous help to my team at Deloitte. As part of our innovation agenda, we are working on developing technology that opens up new business models for Deloitte. AdelphaTech has been instrumental in helping us develop our strategy. Their business-focus approach to building and deploying technology has proven to be a successful way to solve our clients' business problems.\n",
+      "TestimonialName": "Matthew S.",
+      "TestimonialFunction": "Team Lead, Deloitte",
+      "TestimonialImage": "/img/deloitte-1-.jpg"
+    },
+    {
+      "TestimonialDescription": "AdelphaTech provides high quality service, attention to detail, and insightful observations when working on a project. I would not hesitate to recommend AdelphaTech for any project.",
+      "TestimonialName": "Richard .C",
+      "TestimonialFunction": "Director of IT, PMCF",
+      "TestimonialImage": "/img/uhn-1-.jpg"
+    },
+    {
+      "TestimonialDescription": "The team at AdelphaTech is extremely skilled, reliable, organized and communicative. They write very clean code that is easy to maintain, and always makes sure they are hitting deadlines.\n",
+      "TestimonialName": "Adele .C",
+      "TestimonialFunction": "Franchisee, Tutor Doctor",
+      "TestimonialImage": "/img/tutor-doctor-1-.jpg"
+    },
+    {
+      "TestimonialDescription": "Our app has millions of users and so the team working with us had to be top-of-the-line. AdelphaTech has delivered a terrific mobile app on-time and on-budget. The customer service was excellent as we went through the complicated process of porting from iOS to Android.\n",
+      "TestimonialName": "Eddy H.",
+      "TestimonialFunction": "COO, InstaSize",
+      "TestimonialImage": "/img/instasize-1-.jpg"
+    },
+    {
+      "TestimonialDescription": "AdelphaTech is a true bunch of professionals who provided excellent customer service and creative solutions to improving our on-line giving portal. I would highly recommend AdelphaTech to any organization looking for someone who is hard working, deadline oriented, creative and provides solutions to their on-line platform. Kudos AdelphaTech!\n",
+      "TestimonialName": "Kim S.",
+      "TestimonialFunction": "Manager, Kensington Health",
+      "TestimonialImage": "/img/kh-1-.png"
+    }
+  ]
+}
