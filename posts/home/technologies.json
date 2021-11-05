@@ -1,0 +1,36 @@
+{
+  "TechnlogiesTitle": "We are experts in the following technologies",
+  "TechnlogiesDescription": "Digital transformation (Dx) is the change associated with the application of digital technology in all aspects of human life.\n\n",
+  "OurTechnologies": [
+    {
+      "TechnologyTitle": "WEB DEVELOPMENT",
+      "TechnologyDescirption": "HTML 4/5, CSS, Bootstrap, Javascript, Jquery, iOS, Android, AngularJS, BackboneJS, Gulp, Grunt, Bower, ReactJS, Photoshop, Sktech, Dart, Flutter",
+      "TechnologyImage": "/img/img-digital-transformation-1-.png"
+    },
+    {
+      "TechnologyTitle": "BACKEND DEVELOPMENT",
+      "TechnologyDescirption": "PHP, ASP.NET C#, Java, Node JS, Restful API\n\n",
+      "TechnologyImage": "/img/img-cloud-1-.png"
+    },
+    {
+      "TechnologyTitle": "FRAMEWORKS",
+      "TechnologyDescirption": "Bootstrap, Symfony, Loopback, ionic, Phonegap, Code Igniter, CakePHP, Zend, Laravel, COBOL\n\n",
+      "TechnologyImage": "/img/img-user-group-1-.png"
+    },
+    {
+      "TechnologyTitle": "CMS APPLICATIONS",
+      "TechnologyDescirption": "Wordpress, Drupal, Kentico, Ghost, Magento, Prestashop\n\n",
+      "TechnologyImage": "/img/img-digital-transformation-1-.png"
+    },
+    {
+      "TechnologyTitle": "DATABASES",
+      "TechnologyDescirption": "MySQL, MS SQL Server, SQL / T-SQL, Stored Procedures, MongoDB\n\n",
+      "TechnologyImage": "/img/img-cloud-1-.png"
+    },
+    {
+      "TechnologyTitle": "PROJECT MANAGEMENT",
+      "TechnologyDescirption": "Project Management, Agile/Scrum, JIRA, Bitbucket, Gitlab, Github\n\n",
+      "TechnologyImage": "/img/img-user-group-1-.png"
+    }
+  ]
+}

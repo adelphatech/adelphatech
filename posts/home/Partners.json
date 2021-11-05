@@ -1,0 +1,47 @@
+{
+  "PartnersTitle": "Our Partners",
+  "OurPartners": [
+    {
+      "PartnerImage": "/img/asics-1-.png"
+    },
+    {
+      "PartnerImage": "/img/webhelp-1-.png"
+    },
+    {
+      "PartnerImage": "/img/deloitte-1-.png"
+    },
+    {
+      "PartnerImage": "/img/iss-1-.png"
+    },
+    {
+      "PartnerImage": "/img/nespresso-1-.png"
+    },
+    {
+      "PartnerImage": "/img/ocad-1-.png"
+    },
+    {
+      "PartnerImage": "/img/trillium-1-.png"
+    },
+    {
+      "PartnerImage": "/img/kentico-1-.png"
+    },
+    {
+      "PartnerImage": "/img/morocco-government-1-.png"
+    },
+    {
+      "PartnerImage": "/img/kensington-1-.png"
+    },
+    {
+      "PartnerImage": "/img/tutor-doctors-1-.png"
+    },
+    {
+      "PartnerImage": "/img/uhn-1-.png"
+    },
+    {
+      "PartnerImage": "/img/axa-services-1-.png"
+    },
+    {
+      "PartnerImage": "/img/google-1-.png"
+    }
+  ]
+}
