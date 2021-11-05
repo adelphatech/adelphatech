@@ -152,7 +152,7 @@ const index = ({ children }) => {
         <div className="adelphatech-video">
           <img src="App_Themes/Adelphatech/images/logo.PNG" alt="" />
           <div className="text-video video-link" data-video-id="OzztBkwLNe0">
-            <img src="App_Themes/Adelphatech/images/play-interior-video.png" alt="" />
+            <img src="../img/play-interior-video.png" alt="" />
             <p>watch <span>video</span></p>
           </div>
         </div>{/* end adelphatech video */}
@@ -405,7 +405,7 @@ const index = ({ children }) => {
         </div>{/* end our customers*/}
         {/* subscribe now */}
         <div className="subscribe-now">
-          <img src="App_Themes/Adelphatech/images/bg-subscribe-now.png" alt="" />
+          <img src="../img/bg-subscribe-now.png" alt="" />
           {/* container */}
           <div className="container">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">

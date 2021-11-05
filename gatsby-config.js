@@ -8,6 +8,21 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-json`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/posts/Menu`,
+        name: `Menu`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/posts/footer`,
+        name: `footer`,
+      },
+    },
   ]
 }

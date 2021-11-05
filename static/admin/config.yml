@@ -59,7 +59,13 @@ collections:
           - { name: AboutDescription, label: Description, widget: text }
           - { name: AboutCTAText, label: CTA Text, widget: string }
           - { name: AboutCTALink, label: CTA Link, widget: string }
-
+      - file: "posts/footer/stay_connected.json"
+        label: "Stay Connected Footer"
+        name: "StayConnectedFooter"
+        fields:
+          - { name: StayConnectedTitle, label: Title, widget: string }
+          - { name: StayConnectedDescription, label: Description, widget: text }
+          
       - file: "posts/footer/services_footer.json"
         label: "Our Services Links"
         name: "OurServices"
@@ -90,46 +96,92 @@ collections:
         label: "Hero Widget"
         name: "HeroWidget"
         fields:
-          - { name: Title, label: Title, widget: string }
-          - { name: SubTitle, label: Sub Title, widget: string }
+          - { name: FirstHeading, label: First Heading, widget: string }
+          - { name: SecondHeading, label: Second Heading, widget: string }
+          - { name: ImageHeading, label: Image Heading, widget: string }
           - { name: Description, label: Description, widget: text }
-          - { name: Image, label: Image, widget: image }
-          - { name: AndroidCTALink, label: Android CTA Link, widget: string }
-          - { name: IOSCTALink, label: IOS CTA Link, widget: string }
-      - file: "posts/home/benefits.json"
-        label: "Bogo Benefits"
-        name: "BogoBenefits"
+          - { name: CTALink, label: CTA Link, widget: string }
+          - { name: CTAText, label: CTA Text, widget: string }
+      - file: "posts/home/technologies.json"
+        label: "Technologies"
+        name: "Technologies"
         fields:
+          - { name: TechnlogiesTitle, label: Title, widget: string }
+          - { name: TechnlogiesDescription, label: Description, widget: text }
           - {
-              label: Bogo Benefits,
-              name: BogoBenefits,
+              label: Our Technologies,
+              name: OurTechnologies,
               widget: list,
               fields:
                 [
-                  { name: BenefitsImage, label: Image, widget: image },
-                  { name: BenefitsTitle, label: Title, widget: string },
-                   { name: BenefitsCTALink, label: CTA Link, widget: string },
-                  { name: BenefitsDescription, label: Description, widget: string },
-                  
+                  { name: TechnologyTitle, label: Title, widget: string },
+                  { name: TechnologyDescirption, label: Descirption, widget: text },
+                  { name: TechnologyImage, label: Image, widget: image },
                 ],
-            }
-      - file: "posts/home/services.json"
-        label: "Bogo Services"
-        name: "BogoServices"
+            }    
+      - file: "posts/home/Video_Widget.json"
+        label: "Video Widget"
+        name: "VideoWidget"
         fields:
+          - { name: VideoSource, label: Source, widget: string }
+          - { name: VideoImage, label: Image, widget: image }
+
+      - file: "posts/home/projects.json"
+        label: "Latest Projects"
+        name: "LatestProjects"
+        fields:
+          - { name: ProjectsTitle, label: Title, widget: string }
+          - { name: ProjectsDescription, label: Description, widget: text }
+          - { name: ProjectsCTAText, label: CTA Text, widget: string }
+          - { name: ProjectsCTALink, label: CTA Link, widget: string }
           - {
-              label: Bogo Services,
-              name: BogoServices,
+              label: Latest Projects,
+              name: LatestProjects,
               widget: list,
               fields:
                 [
-                  { name: ServicesTitle , label: Title, widget: string },
-                  { name: ServicesImage , label: Image, widget: image },
-                  
+                  { name: ProjectTitle, label: Title, widget: string },
+                  { name: ProjectSubTitle, label: Sub Title, widget: string },
+                  { name: ProjectImage, label: Image, widget: image },
+                ],
+            }    
+
+
+      - file: "posts/home/Testimonials.json"
+        label: "Testimonials"
+        name: "Testimonials"
+        fields:
+          - { name: TestimonialsTitle, label: Title, widget: string }
+          - { name: TestimonialsSubTitle, label: Sub Title, widget: string }
+          - {
+              label: Latest Testimonials,
+              name: LatestTestimonials,
+              widget: list,
+              fields:
+                [
+                  { name: TestimonialName, label: Name, widget: string },
+                  { name: TestimonialFunction, label: Function, widget: string },
+                  { name: TestimonialDescription, label: Description, widget: text },
+                  { name: TestimonialImage, label: Image, widget: image }
+                ],
+            }
+      - file: "posts/home/Partners.json"
+        label: "Our Partners"
+        name: "OurPartners"
+        fields:
+          - { name: PartnersTitle, label: Title, widget: string }
+          
+          - {
+              label: Our Partners,
+              name: OurPartners,
+              widget: list,
+              fields:
+                [
+                  { name: PartnerImage, label: Partner Image, widget: image },
                   
                 ],
             }
-      
+
   - name: "PricingPost"
     label: "Pricing Post"
     files:
