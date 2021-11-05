@@ -24,5 +24,12 @@ module.exports = {
         name: `footer`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/posts/home`,
+        name: `home`,
+      },
+    },
   ]
 }

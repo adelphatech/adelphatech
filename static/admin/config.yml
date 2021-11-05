@@ -117,6 +117,7 @@ collections:
                   { name: TechnologyTitle, label: Title, widget: string },
                   { name: TechnologyDescirption, label: Descirption, widget: text },
                   { name: TechnologyImage, label: Image, widget: image },
+                  {name: Order,label: Order,widget: "select",options: ["first", "second", "third"]} 
                 ],
             }    
       - file: "posts/home/Video_Widget.json"
