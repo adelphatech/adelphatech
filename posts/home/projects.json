@@ -1,0 +1,63 @@
+{
+  "ProjectsTitle": "Latest Projects",
+  "ProjectsDescription": "What has AdelphaTech been working on lately? See below for some of our recent projects.\nInterested in more?",
+  "ProjectsCTAText": "Full portfolio >",
+  "ProjectsCTALink": "/portfolio",
+  "LatestProjects": [
+    {
+      "ProjectTitle": "International School Services",
+      "ProjectSubTitle": "Kentico",
+      "ProjectImage": "/img/project-name-_1_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Kensington Health",
+      "ProjectSubTitle": "Kentico",
+      "ProjectImage": "/img/project-name-_4_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Tutor Doctor",
+      "ProjectSubTitle": "Kentico",
+      "ProjectImage": "/img/project-name-_5_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Webhelp Group",
+      "ProjectSubTitle": "Drupal",
+      "ProjectImage": "/img/project-name-_2_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Northfield Hospital",
+      "ProjectSubTitle": "Drupal",
+      "ProjectImage": "/img/project-name-_8_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Bon Avocat",
+      "ProjectSubTitle": "Drupal",
+      "ProjectImage": "/img/project-name-_14_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Maropost",
+      "ProjectSubTitle": "Wordpress",
+      "ProjectImage": "/img/project-name-_12_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "eSignal",
+      "ProjectSubTitle": "Wordpress",
+      "ProjectImage": "/img/project-name-_7_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "360 Cloud Solutions",
+      "ProjectSubTitle": "Wordpress",
+      "ProjectImage": "/img/project-name-_13_-1-.jpg"
+    },
+    {
+      "ProjectTitle": "InstaSize",
+      "ProjectSubTitle": "Android",
+      "ProjectImage": "/img/project-name-1-.jpg"
+    },
+    {
+      "ProjectTitle": "Tutor Doctor App",
+      "ProjectSubTitle": "Android",
+      "ProjectImage": "/img/project-name-_9_-1-.jpg"
+    }
+  ]
+}
