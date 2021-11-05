@@ -5,8 +5,25 @@ import { withPrefix } from "gatsby"
 import $ from 'jquery';
 import jQuery from 'jquery';
 import { useState, useEffect } from 'react';
+import { useStaticQuery } from "gatsby";
+import SocialMedia from './SocialMedia';
 
-const Footer = ({ data }) => {
+const Footer = () => {
+    const database = useStaticQuery(graphql`
+    query {
+        allFooterJson(filter: {AboutTitle: {ne: null}}) {
+            edges {
+              node {
+                AboutCTALink
+                AboutCTAText
+                AboutDescription
+                AboutTitle
+                
+              }
+            }
+          }
+    }
+  `);
     useEffect(() => {
         // Update the document title using the browser API
         const script = document.createElement("script");
@@ -66,6 +83,7 @@ const Footer = ({ data }) => {
 
         document.body.appendChild(script8);
     });
+
     return (
         <>
 
@@ -74,10 +92,17 @@ const Footer = ({ data }) => {
                 <div className="container">
                     <div className="footer-content">
                         <div className="col-footer about-us">
-                            <h4>about us</h4>
-                            <p>AdelphaTech creates engaging websites and applications on a diverse array of platforms tailored to your specific needs. We’ve performed work for small one person start-ups and managed multi-million dollar projects for world-class organizations such as University Health Network, Nestle, and Deloitte.</p>
-                            <p>&nbsp;</p>
-                            <a href="About.html">Read more</a>
+                            {database.allFooterJson.edges.map(({ node, index }) => {
+                                return (
+                                    <>
+                                        <h4>{node.AboutTitle}</h4>
+                                        <p>{node.AboutDescription}</p>
+                                        <p>&nbsp;</p>
+                                        <a href={node.AboutCTALink}>{node.AboutCTAText}</a>
+                                    </>
+                                );
+                            })}
+
                         </div>
                         <div className="col-footer our-services">
                             <h4>our services
@@ -125,13 +150,9 @@ const Footer = ({ data }) => {
                             </a>
                         </div>
                         <div className="col-xs-12 col-sm-9 col-md-9 col-lg-6">
-                            <p>2020 © Adelphatech All Rights Reserved.
+                            <p>{new Date().getFullYear()} © Adelphatech All Rights Reserved.
                             </p>
-                            <ul className="social-media">
-                                <li><a href="https://www.linkedin.com/company/adelpha-tech" target="_blank"><i className="fa fa-linkedin" aria-hidden="true" /></a></li>
-                                <li><a href="AdelphaTech.html" target="_blank"><i className="fa fa-twitter" aria-hidden="true" /></a></li>
-                                <li><a href="adelphatech/index.htm" target="_blank"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                            </ul>
+                            <SocialMedia />
                         </div>
                     </div>
                 </div> {/* end copyright */}

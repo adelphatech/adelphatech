@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import { useStaticQuery } from "gatsby";
+
 import "../assets/css/Adelphatech.css";
 import "../assets/css/1-bootstrap.css";
 import "../assets/css/2-font-awesome.min.css";
@@ -8,9 +10,27 @@ import "../assets/css/5-owl.theme.css";
 import "../assets/css/6-responsive-menu.css";
 import "../assets/css/7-main.css";
 import "../assets/css/jquery.bxslider.css";
+import SocialMedia from './SocialMedia';
 
 
-const Header = ({ data }) => {
+const Header = () => {
+    const data = useStaticQuery(graphql`
+    query {
+      allMenuJson(
+        sort: { fields: Order, order: ASC }
+        filter: { CTAText: { ne: null } }
+      ) {
+        edges {
+          node {
+            CTALink
+            CTAText
+            Order
+          }
+        }
+      }
+    }
+  `);
+
 
     return (
         <>
@@ -33,7 +53,7 @@ const Header = ({ data }) => {
                     {/* container */}
                     <div className="container">
                         <div className="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                            <a href="Home.html"><img id="p_lt_ctl01_EdtHeaderLogo_ucEditableImage_imgImage" src="../img/logo-header.png?ext=.png" alt="" />
+                            <a href="/"><img id="p_lt_ctl01_EdtHeaderLogo_ucEditableImage_imgImage" src="../img/logo-header.png?ext=.png" alt="" />
                             </a>
                         </div>
                         <div className="col-xs-6 col-sm-9 col-md-9 col-lg-9">
@@ -41,28 +61,22 @@ const Header = ({ data }) => {
                             <div className="col-xs-6 col-sm-8 col-md-8 col-lg-9">
                                 <nav className="desktop-menu">
                                     <ul id="menuElem" className="nav navbar-nav CMSListMenuUL">
-                                        <li className="nav navbar-nav CMSListMenuHighlightedLI">
-                                            <a className="nav navbar-nav CMSListMenuLinkHighlighted" href="Home.html">Home</a>
-                                        </li>
-                                        <li className="nav navbar-nav CMSListMenuLI">
-                                            <a className="nav navbar-nav CMSListMenuLink" href="About.html">About</a>
-                                        </li>
-                                        <li className="nav navbar-nav CMSListMenuLI">
-                                            <a className="nav navbar-nav CMSListMenuLink" href="Portfolio.html">Portfolio</a>
-                                        </li>
-                                        <li className="nav navbar-nav CMSListMenuLI">
-                                            <a className="nav navbar-nav CMSListMenuLink" href="Contact.html">Contact</a>
-                                        </li>
+                                        {data.allMenuJson.edges.map(({ node, index }) => {
+                                            return (
+                                                <>
+                                                    <li className="nav navbar-nav CMSListMenuHighlightedLI">
+                                                        <a className="nav navbar-nav " href={node.CTALink}>{node.CTAText}</a>
+                                                    </li>
+                                                </>
+                                            );
+                                        })}
+
                                     </ul>
                                 </nav>{/* end desktop menu */}
                             </div>
                             <div className="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-                                <ul className="social-media">
-                                    <li><a href="https://www.linkedin.com/company/adelpha-tech" target="_blank"><i className="fa fa-linkedin" aria-hidden="true" /></a></li>
-                                    <li><a href="AdelphaTech.html" target="_blank"><i className="fa fa-twitter" aria-hidden="true" /></a></li>
-                                    <li><a href="adelphatech/index.htm" target="_blank"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                                    {/*    <li><a href="/Search"><i class="search-icon" aria-hidden="true"></i></a></li>*/}
-                                </ul></div>
+                                <SocialMedia />
+                            </div>
                             {/* mobile menu */}
                             <div id="o-wrapper" className="o-wrapper">
                                 <div className="c-buttons">
